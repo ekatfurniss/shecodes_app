@@ -1,21 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-    <h1>
-        Hello Git
-    </h1>
-    <form>
-        <input type="text" placeholder="Enter your email"/>
-        <input type="password" placeholder="Enter your password"/>
-        <input type="submit" value="Login">
-    </form>
-    <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>SheCodes Plus Project</title>
+    <script
+      src="https://kit.fontawesome.com/046f466089.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container border">
+      <div class="row">
+        <div class="col-8">
+          <form id="input-form">
+          <input
+            type="text"
+            id = "search-input"
+            class="form-control"
+            placeholder="Enter your city..."
+          >
+        </div>
+          <div class="col">
+          <input type="submit" value="Search city" class="btn btn-primary">
+        </div> 
+        </form>
+        
+      </div>
+      <div class="row">
+            <div class="col-2">
+            <i class="fas fa-cloud-rain rain-icon"></i>
+            </div>
+            <div class="col-3 main-weather">
+                <h1>15°C</h1>
+                <p>Rain</p> 
+                <button id ="current-location" class="btn btn-light"> Current location </button>
+            </div> 
+            <div class="col-7">
+            <h2>Cologne,</br> Germany</h2>
+            <p class="date" id="today">Saturday </br> 8:00</p>
+            </div>
+        </div>
+
+      <div class="row days">
+        <div class="col">
+          <p>Sun</p>
+        </div>
+        <div class="col">
+          <p>Mon</p>
+        </div>
+        <div class="col">
+          <p>Tue</p>
+        </div>
+        <div class="col">
+          <p>Wed</p>
+        </div>
+        <div class="col">
+          <p>Thurs</p>
+        </div>
+      </div>
+      <div class="row icons">
+        <div class="col">
+          <i class="fas fa-cloud cloud-icon"></i>
+        </div>
+        <div class="col">
+          <i class="fas fa-cloud-sun mix-icon"></i>
+        </div>
+        <div class="col">
+          <i class="fas fa-cloud-sun mix-icon"></i>
+        </div>
+        <div class="col">
+          <i class="fas fa-sun sun-icon"></i>
+        </div>
+        <div class="col">
+          <i class="fas fa-sun sun-icon"></i>
+        </div>
+      </div>
+      <div class="row temp">
+        <div class="col cool">
+          <p>15°C</p>
+        </div>
+        <div class="col cool">
+          <p>17°C</p>
+        </div>
+        <div class="col cool">
+          <p>17°C</p>
+        </div>
+        <div class="col warm">
+          <p>22°C</p>
+        </div>
+        <div class="col warm">
+          <p>22°C</p>
+        </div>
+    </div>
+    <script src = "src/script.js"></script> 
+  </body>
 </html>
