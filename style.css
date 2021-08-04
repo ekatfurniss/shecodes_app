@@ -1,4 +1,82 @@
-h1{
-    text-align: center;
-    color: blue;
+h1 {
+  font-size: 50px;
+}
+h2,
+.date {
+  text-align: right;
+  margin: 0 auto;
+}
+h2 {
+  color: #5b6275;
+  position: relative;
+  padding: 12px 20px 0 0;
+}
+.btn-light {
+  font-size: 15px;
+  position: relative;
+  right: 85px;
+  top: -10px;
+}
+.btn-light:hover {
+  cursor: pointer;
+  background: #43a5f5;
+  color: white;
+}
+.border {
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 550px;
+}
+
+.btn-primary {
+  background: #5b6275;
+  border: #5b6275;
+}
+.btn-primary:hover {
+  background: #939aa9;
+  border: #5b6275;
+}
+.date {
+  color: #939aa9;
+  padding: 0 20px 20px 0;
+}
+.main-weather {
+  color: #43a5f5;
+  padding: 12px 0 0 20px;
+}
+.rain-icon {
+  color: #43a5f5;
+  font-size: 80px;
+  padding: 20px 0 20px 0;
+}
+.days,
+.icons,
+.temp {
+  max-width: 550px;
+}
+.days {
+  color: #5b6275;
+  font-size: 18px;
+}
+.cloud-icon,
+.mix-icon,
+.sun-icon {
+  font-size: 40px;
+}
+.cloud-icon,
+.mix-icon {
+  color: #43a5f5;
+}
+.sun-icon {
+  color: #ffa726;
+}
+.temp {
+  font-size: 16px;
+  padding: 10px;
+}
+.cool {
+  color: #43a5f5;
+}
+.warm {
+  color: #ffa726;
 }
