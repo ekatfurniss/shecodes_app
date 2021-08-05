@@ -31,6 +31,7 @@ function handleSubmit(event) {
   let h2 = document.querySelector("h2");
   h2.innerHTML = city;
   searchCity(city);
+  clearForm();
 }
 function searchCity(city) {
   let apiKey = "0e954a27e70e02e021adf652b4a8e0b0";
@@ -41,6 +42,12 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${temperature}°C`;
+}
+
+function clearForm() {
+  let oldInput = document.querySelector("#search-input");
+  console.log(oldInput.value);
+  oldInput.value = "";
 }
 
 let form = document.querySelector("#input-form");
