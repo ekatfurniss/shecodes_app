@@ -46,7 +46,6 @@ function showTemperature(response) {
 let form = document.querySelector("#input-form");
 form.addEventListener("submit", handleSubmit);
 
-// Homework Week 5 Bonus Feature
 
 function showGeoTemp(response) {
   let h1 = document.querySelector("h1");
@@ -57,13 +56,10 @@ function showGeoTemp(response) {
   h2.innerHTML = `${response.data.name}`;
 }
 
-let button = document.querySelector("#current-location");
-button.addEventListener(
-  "click",
-  navigator.geolocation.getCurrentPosition(retrievePosition)
-);
-
-//navigator.geolocation.getCurrentPosition(retrievePosition);
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(retrievePosition);
+}
 
 function retrievePosition(position) {
   let apiKey = "0e954a27e70e02e021adf652b4a8e0b0";
@@ -74,6 +70,9 @@ function retrievePosition(position) {
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(url).then(showGeoTemp);
 }
+
+let button = document.querySelector("#current-location");
+button.addEventListener("click", getCurrentLocation);
 
 // Homework Week 4 Feature #3
 
